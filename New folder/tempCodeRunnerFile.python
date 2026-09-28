@@ -1,0 +1,319 @@
+# if __name__ == '__main__':
+#     n = int(input())
+#     student_marks = {}
+#     for _ in range(n):
+#         name, *line = input().split()
+#         scores = list(map(float, line))
+#         student_marks[name] = scores
+#     query_name = input()
+#     if query_name in student_marks:
+#         print(student_marks[query_name])
+#         average=print(student_marks[query_name].add())
+#         print(f"{average:.2f}")
+
+# if __name__ == '__main__':
+#     arr = []
+#     n = int(input())
+
+#     for _ in range(n):
+#         command = input().split()
+
+#         if command[0] == "insert":
+#             arr.insert(int(command[1]), int(command[2]))
+
+#         elif command[0] == "print":
+#             print(arr)
+
+#         elif command[0] == "remove":
+#             arr.remove(int(command[1]))
+
+#         elif command[0] == "append":
+#             arr.append(int(command[1]))
+
+#         elif command[0] == "sort":
+#             arr.sort()
+
+#         elif command[0] == "pop":
+#             arr.pop()
+
+#         elif command[0] == "reverse":
+#             arr.reverse()
+# def factorial(n):
+#     if n==0:
+#         return 1
+#     else:
+#         return n*factorial(n-1)
+# print(factorial(9))
+
+# class students:
+#     def __init__(self,name,marks):
+#         self.name=name
+#         self.marks=marks
+#     def stu_details(self):
+#         print(f"name of the student{self.name},marks of the students{self.marks}")
+
+# student_information= students("ranjitha",220)
+# student_information.stu_details()
+
+# class human:
+#     def __init__(self,name,age,salary="unknown"):
+#         self.name=name
+#         self.age=age
+#         self.salary=salary
+#     def info(self):
+#         print(f"name:{self.name},age:{self.age},salary:{self.salary}")
+# human_info=human("ranjitha",19,0)
+# human_info.info()
+# human.info(human_info)
+
+# class database:
+#     def __init__(self):
+#         self.storage={}#public
+#         self._storage={}#protected
+#         self.__storage={} #private
+
+#     def write(self,key,value):
+#         self.storage[key]=value
+
+#     def read(self,key):
+#         if key in self.storage:
+#             return self.storage[key]
+#         else:
+#             print("DB item not available")
+# db=database()
+# db.write("sub","100k")
+# print(db.storage)
+
+# class ATM:
+#     def __init__(self,balance,):
+#         self._balance=balance
+        
+    
+#     def deposit(self,amount):
+#         # self.amount=amount
+        
+#         self._balance += amount
+#         print(f"depositd {amount}.new balance is{self._balance}")
+
+#     def withdraw(self,amount):
+#         if amount <= self._balance:
+#             self._balance -= amount
+#             print(f"withdraw{amount}.new balance is {self._balance}")
+#         else:
+#             print("insufficient amount to withdraw")
+#     def check_balance(self):
+#         print(f"the balance is {self._balance}")
+    
+# atm=ATM(1000)
+# atm.deposit(100)
+# atm.withdraw(500)
+# atm.check_balance()
+
+# class family:
+#     def __init__(self,surename):
+#         self.surename=surename
+
+# class child(family):
+#     def __init__(self, surename,name):
+#         super().__init__(surename)
+#         self.name=name
+# children =child("gowda","ranjitha")
+# print(f"{children.name} and {children.surename}")
+
+
+# class car:
+#     def __init__(self,brand):
+#         self.brand=brand
+# class subcar(car):
+#     def __init__(self, brand,name):
+#         super().__init__(brand)
+#         self.name=name
+# carexpo=subcar("toyata","bmw")
+# print(f"{carexpo.brand} and {carexpo.name} ")
+
+# class animal:
+#     def __init__(self,dog):
+#         self.dog=dog
+# class cat(animal):
+#     def __init__(self, dog,cat):
+#         super().__init__(dog)
+#         self.cat=cat
+
+# d=cat("alfanzo","meow")
+# print(f"{d.cat} and {d.dog}")
+
+
+# class animal:
+#     def speak(self):
+#         print("animal make sound")
+
+# class dog(animal):
+#     def bark(self):   
+#         print("dog barks")
+
+# d=dog()
+# d.speak()
+# d.bark()
+
+# class grandparent:
+#     def house(self):
+#         print("big house")
+# class parent(grandparent):
+#     def car(self):
+#         print("family car")
+# class child(parent):
+#     pass
+# c=child()
+# c.house()
+# c.car()
+
+# class animal:
+#     def make_sound(self):
+#         print("animal making sound")
+
+# class dog(animal):
+#     def make_sound(self):
+#         return super().make_sound()
+#     print("bark")
+
+# class cat(animal):
+#     def make_sound(self):
+
+#         return super().make_sound()
+#     print("meow")
+
+# Animals=[dog(),cat()]
+# for Animal in Animals:
+#     Animal.make_sound()
+
+# class math:
+#     def add (self,a,b,c=0):
+#         return a+b+c
+# m=math()
+# print(m.add(2,3))
+
+# class animal:
+#     def sound(self):
+#         print("animals make sound")
+
+# class dog(animal):
+#     def sound(self):
+#         print("dog barks")
+    
+# class cat(animal):
+#     def sound(self):
+#         print("cat meow")
+
+# animals=[dog(),cat()]
+# for a in animals:
+#     a.sound()
+
+# class payment:
+#     def pay(self):
+#         pass
+# class creditcard(payment):
+#     def pay(self):
+#         print("paid using credit card")
+
+# class UPI(payment):
+#     def pay(self):
+#         print("paid using UPI")
+
+# class cash(payment):
+#     def pay(self):
+#         print("paid through cash")
+
+# payment=[creditcard(),UPI(),cash()]
+# for p in payment:
+#     p.pay()
+
+# class student:
+#     def __init__(self,name,marks):
+#         self.name=name
+#         self.__marks=marks #private
+
+#     def get_marks(self):
+#         return self.__marks
+    
+#     def set_marks(self,new_marks):
+#         if new_marks >=0 and new_marks <=100:
+#             self.__marks=new_marks
+#         else:
+#             print("invalid marks")
+
+# s1=student("ranjitha",45)
+# print(s1.get_marks())
+
+# s1.set_marks(50)
+# print(s1.get_marks())
+
+# class animals:
+#     def make_sound(self):
+#         print("animal is making sound")
+
+# class dog(animals):
+#     def make_sound(self):
+#         print("dog make sound")
+
+# s=dog()
+# print(s.make_sound())
+    
+# from abc import ABC,abstractmethod
+
+# class vehicle(ABC):
+#     @abstractmethod
+#     def start_engine(self):
+#         pass
+
+# class bike(vehicle):
+#     def __init__(self,name):
+        
+#         self.name=name
+
+#     def start_engine(self):
+#         print("starting engine")
+
+# b=bike("royal enfield")
+# print(b.name)
+
+def add(a,b):
+    return a+b
+def sub(a,b):
+    return a-b
+def mul(a,b):
+    return a*b
+def div(a,b):
+    if b==0:
+        return "cannot divide by zero"
+    return a/b 
+
+while(True):
+    
+    print("simple calculator")
+    print("1.addition")
+    print("2.substraction")
+    print("3.multiplication")
+    print("4.division")
+    print("5.exit")
+
+    choice=int(input("enter your choice(1-5): "))
+        
+    if choice in range(1,5):
+        
+        a=int(input("enter the value of a:"))
+        b=int(input("enter the value of b:"))
+
+    if choice==1:
+        print("result:",add(a,b))
+        
+    elif choice==2:
+        print("result:",sub(a,b))
+    elif choice==3:
+        print("result:",mul(a,b))
+    elif choice==4:
+        print("result:",div(a,b))
+    else:
+        print("exit from the calculator")
+        break
+
+
